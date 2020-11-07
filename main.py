@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+import time
 
 URL = 'https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B0883KXHG3/ref=sr_1_1_sspa?dchild=1&keywords=macbook+pro&qid=1604778924&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFaTEFEMlk5NTI2WjMmZW5jcnlwdGVkSWQ9QTAyNDA2NjYzRjlDWUMwV0VROURMJmVuY3J5cHRlZEFkSWQ9QTA4MjIzNDExMUxOTjI4UzY4U0oxJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=='
 
@@ -52,4 +53,6 @@ def send_mail():
     server.quit()
 
 
-check_price()
+while (True):
+    # check_price()
+    time.sleep(60*60)  # after every hour
