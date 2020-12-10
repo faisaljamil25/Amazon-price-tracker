@@ -36,7 +36,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('algomessiaha@gmail.com', '<YOUR PASSWORD>')
+    server.login('<YOUR EMAIL ID>', '<YOUR PASSWORD>')
 
     subject = 'Price fell down! Hurry up!'
     body = 'Check the amazon link https://www.amazon.in/Apple-MacBook-Pro-8th-Generation-Intel-Core-i5/dp/B0883KXHG3/ref=sr_1_1_sspa?dchild=1&keywords=macbook+pro&qid=1604778924&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFaTEFEMlk5NTI2WjMmZW5jcnlwdGVkSWQ9QTAyNDA2NjYzRjlDWUMwV0VROURMJmVuY3J5cHRlZEFkSWQ9QTA4MjIzNDExMUxOTjI4UzY4U0oxJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=='
@@ -44,8 +44,8 @@ def send_mail():
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'algomessiaha@gmail.com',  # from mail
-        'f786jamil@gmail.com',  # to mail
+        '<YOUR EMAIL ID>',  # from mail
+        '<RECEIVER EMAIL ID>',  # to mail
         msg
     )
     print('HEY EMAIL HAS BEEN SENT!')
